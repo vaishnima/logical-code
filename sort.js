@@ -1,13 +1,12 @@
-function customSort(arr) {
-    
-    var mid = Math.floor(arr.length / 2);
-    var firstHalf = arr.slice(0, mid).sort((a, b) => a - b);
-    var secondHalf = arr.slice(mid).sort((a, b) => b - a);
-
+function customSort(array){
+    const mid = Math.floor(array.length/2);
+    const firstHalf=array.slice(0,mid);
+    const secondHalf=array.slice(mid);
+    firstHalf.sort((p,q) => p-q);
+    secondHalf.sort((p,q) => q-p);
     return firstHalf.concat(secondHalf);
+
 }
-
-var inputArray = [45, 67, 90, 34, 87, 10];
-var resultArray = customSort(inputArray);
-
-console.log("Result Array with first half sorted in ascending order and second half sorted in descending order:", resultArray);
+const Array = [3,7,1,4,90,67,10,78,45];
+const sortedArray = customSort(Array);
+console.log(sortedArray);
