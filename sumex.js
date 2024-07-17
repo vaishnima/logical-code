@@ -11,3 +11,4 @@ function sumExceptSelf(nums) {
 var nums = [4, 3, 2, 10];
 var output = sumExceptSelf(nums);
 console.log(output);
+
